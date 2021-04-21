@@ -105,7 +105,8 @@ public class MainActivity extends AppCompatActivity {
      * Purpose: Handles the result of the EditActivity - Verifies result (RESULT_OK && from EDIT_TEXT_CODE), updates/saves item, notifies RV adapter, show pop up confirmation to user
      */
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        if(resultCode == RESULT_OK && requestCode == EDIT_TEXT_CODE){
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == RESULT_OK && requestCode == EDIT_TEXT_CODE) {
             String itemText = data.getStringExtra(KEY_ITEM_TEXT);
             int position = data.getExtras().getInt(KEY_ITEM_POSITION);
 
@@ -114,8 +115,7 @@ public class MainActivity extends AppCompatActivity {
             saveItems();        //write changed items to saved file
 
             Toast.makeText(getApplicationContext(), "Item updated successfully!", Toast.LENGTH_SHORT);
-        }
-        else{
+        } else {
             Log.w("MainActivity", "Unknown call to onActivityResult()");
         }
     }
