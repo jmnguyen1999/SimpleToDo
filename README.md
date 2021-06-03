@@ -35,7 +35,7 @@ I had created this app and gif on my laptop, making the program extremely slow t
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright 2021 Josephine Mai Nguyen
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
